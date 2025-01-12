@@ -1,0 +1,215 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color1: #F28585;
+    --color2: #FFA447;
+    --color3: #FFFC9B;
+    --color4: #B7E5B4;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#webpage {
+    background-color: var(--color3);
+}
+
+#window {
+    max-width: 30rem;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    background-color: var(--color3);
+}
+
+#history {
+    padding-top: 2rem;
+}
+
+.historycontent {
+    text-align: center;
+}
+
+#primary_history {
+    color: var(--color1);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    padding-top: 0.8rem;
+}
+
+#secondary_history {
+    font-size: 0.9rem;
+    color: var(--color1);
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+}
+
+#screenbox {
+    text-align: end;
+    display: flex;
+    margin: 0.7rem auto;
+    padding: 0.5rem;
+    background-color: var(--color4);
+    border-radius: 6px;
+    justify-content: end;
+    align-items: end;
+    width: 17rem;
+    overflow: auto;
+}
+
+#screenbox::-webkit-scrollbar{
+    background:#B7E5B4;
+    border-radius: 50%;
+    height: 6px;
+}
+
+#screenbox::-webkit-scrollbar-thumb{
+    background:#ecffea;
+    border-radius: 15px;
+    box-shadow: 0px -2px 0px 0px inset #B7E5B4;
+}
+
+#screen {
+    text-align: right;
+    font-size: 2rem;
+    color: white;
+    width: 17rem;
+    height: 2.3rem;
+    white-space: nowrap;
+}
+
+#keypad {
+    padding: 0.3rem;
+    padding-top: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.keys {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color2);
+    transition: border-radius 150ms;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.keys a {
+    font-weight: 700;
+    color: white;
+    font-size: 1.4rem;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+.fa-delete-left {
+    color: white;
+}
+
+.keys:active {
+    border-radius: 20px;
+    background-color: #ff9020;
+}
+
+.keys1 {
+    border-radius: 20px;
+}
+
+#equal {
+    border-radius: 20px;
+    background-color: #ff840a;
+}
+
+#equal:active {
+    background-color: var(--color4);
+}
+
+#equal:active a {
+    color: black;
+}
+
+#ac {
+    background-color: #f56565;
+    border-radius: 20px;
+}
+
+#ac:active {
+    background-color: #f57e7e;
+}
+
+#ac:active a {
+    color: black;
+}
+
+#delete:active {
+    border-radius: 50%;
+    background-color: #f56565;
+}
+
+@media only screen and (max-width:600px) {
+    #history {
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    #primary_history {
+        font-size: 1rem;
+    }
+
+    #secondary_history {
+        font-size: 0.7rem;
+    }
+
+    #screenbox {
+        width: 13rem;
+    }
+    
+    #screen {
+        height: 1.8rem;
+        font-size: 1.5rem;
+        width: 13rem;
+    }
+
+    .keys {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .keys a {
+        font-size: 1rem;
+    }
+}
